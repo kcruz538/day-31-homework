@@ -14,3 +14,11 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<%= simple_form_for @sweet do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category %>
+  <%= f.input :photo %>
+  <%= f.submit class: "btn btn-primary btn-lg" %>
+<% end %>

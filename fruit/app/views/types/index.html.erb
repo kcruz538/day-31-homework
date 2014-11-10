@@ -13,7 +13,7 @@
   <tbody>
     <% @types.each do |type| %>
       <tr>
-        <td><%= type.category.name %></td>
+        <td><%= type.category.name if type.category %></td>
         <td><%= type.name %></td>
         <td><%= type.photo %></td>
         <td><%= link_to 'Show', type %></td>

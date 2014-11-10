@@ -57,10 +57,7 @@ set :images_dir, 'images'
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
-activate :deploy do |deploy|
-deploy.method = :git
 
-end
 
   # Minify Javascript on build
   # activate :minify_javascript
@@ -69,8 +66,13 @@ end
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+deploy.method = :git
+
 end
